@@ -1,0 +1,105 @@
+
+.trending-books-container .slick-slide {
+    padding:0px 10px 0px 10px;
+    box-sizing: border-box;
+    height: 250px;
+}
+  
+
+.trending-books-container .slick-slider{
+
+    margin-top: 10px;
+}
+
+.trending-books-container .slick-slider .slick-next, .slick-prev{
+    display: none !important;
+} 
+
+
+.slick-btn{
+    background-color: #ECF0EF;
+    border: none;
+    margin-left: 15px;
+    border-radius: 50%;
+}
+.slick-btn:hover{
+    background-color: #0AAD0A;
+    color: white;
+}
+
+.slider-heading{
+    font-size:var(--main-heading);
+    font-weight: var(--font-weight500);
+}
+.slider-para{
+    margin-top: 5px;
+    font-size: var(--sub-heading);
+    font-weight: var(--font-weight500);
+    line-height: 1;
+    word-break: normal;
+    text-align: left;
+}
+
+
+.trending-book-slide{
+    height: auto;
+    padding: 0px 5px 0px 5px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.trending-book-slide img{
+    width: 100%;
+    height:150px;
+}
+.trending-book-slide:hover{
+    cursor: pointer;
+    border-color: #0AAD0A;
+    transition: 0.1ms;
+    transform: scale(1.01);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+} 
+
+
+.overlay-container{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    height: 100px;
+    display: none;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+}
+.overlay-container .tooltip{
+    padding: 5px;
+    font-size: 14px;
+    font-family: 'Poppins';
+}
+.book-container{
+    position:relative;
+    z-index: 0;
+    text-align: center;
+}
+.overlay-btn{
+    margin-right: 5px;
+    padding:3px 6px;
+    background-color: white;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.overlay-btn:hover{
+    background-color: green;
+    color: white;
+}
+.trending-book-slide:hover .overlay-container{display: flex;}
+
+.stock-container{
+    width: 100%;
+    background-color:bisque;
+    height: 20px;
+}
+
+.stock-container p{
+    font-size: 13px;
+}

@@ -1,0 +1,89 @@
+.cart-main-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.empty-cart-container{
+    height: 80vh;
+    line-height:0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-devices-view{
+    width: 600px;
+    height: auto;
+    border: 1px solid red;
+}
+.cart-sub-heading{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart-ul-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-bottom: 20px;
+}
+.cart-ul-list li{
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid gray;
+}
+.empty-cart{
+    width:200px;
+}
+@media screen and (min-width:600px) {
+    .empty-cart{
+        width: 300px;
+    }
+}
+.cart-flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-img{
+    width: 70px;
+    margin-right: 25px;
+}
+.cart-content-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+.add-on{
+    align-self: flex-end;
+    margin-bottom: 5px;
+}
+.add-on button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+.book-details p{
+   margin-bottom: 2px;
+}
+.cart-book-name{
+    font-size: 15px;
+    max-width: 75%;
+    line-height: 1.3;
+    font-weight: 600;
+}
+.cart-book-author{
+    font-size: 12px;
+    line-height: 0.8px;
+}
+.cart-book-publisher{
+    font-size: 13px;
+    color: #0AAD0A;
+}

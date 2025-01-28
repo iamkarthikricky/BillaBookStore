@@ -1,0 +1,34 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+h1,h2,h3,h4,h5,h6,p,a,span,div,li,ul,ol,button,input,textarea,select{
+    font-family: var(--font-family);
+    margin: 0;
+}
+img{
+   
+    margin: 0;
+}
+button{
+    cursor: pointer;
+}
+:root{
+    --font-family: 'Lato';
+    --main-heading:16px;
+    --sub-heading:14px;
+    --para:12px;
+    --sub-para:10px;
+    --font-weight400:400;
+    --font-weight500:500;
+    --font-weight600:600;
+}
+
+@media screen and (min-width: 768px){
+    :root{
+        --main-heading:18px;
+        --sub-heading:16px;
+        --para:14px;
+        --sub-para:12px;
+    }
+    
+}
