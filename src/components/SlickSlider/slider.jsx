@@ -1,19 +1,20 @@
-import { useRef,useState } from "react";
+import { useRef, useState } from "react";
 
-import { Tooltip} from 'react-tooltip';
-import { AiOutlineEye,AiOutlineHeart } from "react-icons/ai";
-import {FaAngleRight, FaAngleLeft} from "react-icons/fa";
+
+import { AiOutlineEye, AiOutlineHeart } from "react-icons/ai";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
-import './slider.css'
-import ModalComponent from "../Modal/modal";
+import './slider.css';
 
-import BookStoreContext from "../../Context/BookStoreContext";
 import { useSelector } from "react-redux";
+import MyModal from "../Modal/modal";
+
+import { Tooltip } from 'antd';
 
 
 
@@ -21,11 +22,12 @@ const SlickSlider=props=>{
   const {booksList,heading}=props
 
 
-  const [showComponent, setShowComponent] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [bookDetails,setBookDetails] = useState([]);
 
   const handleButtonClick = bookDetails => {
-      setShowComponent(!showComponent);
+    console.log(bookDetails)
+      setIsModalOpen(!isModalOpen);
       setBookDetails(bookDetails)
   };
 
@@ -90,12 +92,16 @@ const SlickSlider=props=>{
                   <div className="trending-book-slide" key={e.id}>
                       <div className="overlay-container">
                       
-                      <a href="#" data-toggle="modal" data-target="#exampleModal" data-tooltip-id="quickView" data-tooltip-content="Quick View" data-tooltip-place="left"><button className="overlay-btn" onClick={()=>handleButtonClick(e)}><AiOutlineEye /></button>
-                          <Tooltip id="quickView" className="tooltip"/>
-                      </a>
-                      <a href="#" data-tooltip-id="favourite" data-tooltip-content="Favourite" data-tooltip-place="left"><button className="overlay-btn"><AiOutlineHeart /></button>
-                          <Tooltip id="favourite" className="tooltip"/>
-                      </a>
+                     
+                           <Tooltip placement="topLeft" title={"Quick View"}>
+                                        <button className="overlay-btn" onClick={()=>handleButtonClick(e)}><AiOutlineEye /></button>
+                        </Tooltip>
+
+                        <Tooltip placement="topLeft" title={"Favourite"}>
+                        <button className="overlay-btn"><AiOutlineHeart /></button>
+                        </Tooltip>
+                      
+                     
                       </div>
                       <div className="book-container">
                         <div className="stock-container">  {e.saleInfo.saleability === 'FOR_SALE' ? <p className="in-stock mt-0">In Stock</p> : <p className="out-of-stock mt-0">Out of Stock</p>}</div>
@@ -109,8 +115,10 @@ const SlickSlider=props=>{
               </div>
           ))}
       </Slider>
+      
       </div>
-          {showComponent && <ModalComponent handleButtonClick={handleButtonClick} bookDetails={bookDetails}/>}
+      <MyModal isOpen={isModalOpen} onClose={()=>{setIsModalOpen(false)}} bookDetails={bookDetails}/>
+          {/* {showComponent && <ModalComponent handleButtonClick={handleButtonClick} bookDetails={bookDetails}/>} */}
         </div>
         
   )

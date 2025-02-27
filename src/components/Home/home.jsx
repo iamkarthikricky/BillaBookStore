@@ -22,10 +22,10 @@ const Home=() => {
     <Header />
     <div className="container">
               <div className="row">
-                <div className="col-12">
+                <div className="col-12 gap-1.5">
                    <BestBooks />
-    {/* <Magazines />
-    <EBooks /> */}
+    <Magazines />
+    <EBooks /> 
    
                   </div>
                   </div>

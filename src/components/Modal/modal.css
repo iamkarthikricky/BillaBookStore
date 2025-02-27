@@ -1,19 +1,4 @@
-.modal-container{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    background: rgba(49,49,49,0.8);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    padding: 10px;
-}
+
 
 .modal-content-container{
     margin-top: 10px;
@@ -28,6 +13,16 @@
         justify-content: flex-start;
     
     }
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-self:center;
+
+    width:auto;
+    height: auto;
 }
 
 
@@ -54,7 +49,15 @@
         margin-left: 20px;
         margin-right: 20px;
     }
+}
 
+.book-title{
+    font-size: var(--main-heading);
+    font-weight:var( --font-weight600);
+}
+.book-authors{
+    font-size: var(--para);
+    font-weight: var(--font-weight600);
 }
 
 .book-publisher{
@@ -70,7 +73,7 @@
     font-size: 16px;
     color: #0AAD0A;
     font-weight: bolder;
-    margin:5px 0px 10px 0px;
+   
 }
 
 .cart-btn{
@@ -100,7 +103,7 @@
 }
 
 .checkout-btn{
-    margin-top: 10px;
+  
     background-color:tomato;
     width: 180px;
     height: 40px;
@@ -109,4 +112,17 @@
     font-weight: 400;
     border: none;
     color: #ffffff;
+}
+
+
+.retail-price{
+    font-size: var( --sub-heading);
+    color: #000000;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.list-price{
+    font-size: var( --sub-heading);
+    color: #0AAD0A;
+    font-weight: bold;
 }

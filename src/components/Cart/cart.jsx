@@ -15,6 +15,7 @@ const Cart=()=>{
     let onDecrementQuantity  = null
     let removeFromCart = null
 
+    
     const onItemQuantityIncrement =(e)=>{
         onIncrementQuantity(e.id)
     }
